@@ -11,3 +11,7 @@ In particular, we will train the GPT2 base model which contains just 124 million
 
 ~> Với example này, mặc dù mình đã copy y nguyên source code của tác giả nhưng ... bị lỗi :( thành ra phải fix lại một vài chỗ, sau hơn 1 ngày làm việc thì cũng đã xử lý xong ^^ <br>
 ~> Để thể hiện sự tôn trọng đối với tác giả, mình để nguyên phần code bản gốc, chỉ rào lại và thêm phần code sửa lại ở ngay dưới để vẫn đảm bảo source code chạy được và người đọc vẫn follow được phần source code nguyên bản ban đầu của tác giả ^^ <br>
+
+### Tham khảo:
+- https://huggingface.co/docs
+- https://pytorch.org/tutorials/index.html
