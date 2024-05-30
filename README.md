@@ -17,6 +17,8 @@ In particular, we will train the GPT2 base model which contains just 124 million
 - https://huggingface.co/docs
 - https://github.com/tatsu-lab/stanford_alpaca
 - https://pytorch.org/tutorials/index.html
+- https://debuggercafe.com/fine-tuning-phi-1-5-using-qlora
+- https://debuggercafe.com/fine-tuning-qwen-1-5-for-coding
 
 ### Screen shot:
 ![alt text](https://github.com/Mr-Jack-Tung/Instruction-Tuning-GPT2-on-Alpaca-Dataset/blob/main/Screenshot_Instruction-Tuning_GPT2_2024-05-30_01.jpg)
