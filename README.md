@@ -13,5 +13,7 @@ In particular, we will train the GPT2 base model which contains just 124 million
 ~> Để thể hiện sự tôn trọng đối với tác giả, mình để nguyên phần code bản gốc, chỉ rào lại và thêm phần code sửa lại ở ngay dưới để vẫn đảm bảo source code chạy được và người đọc vẫn follow được phần source code nguyên bản ban đầu của tác giả ^^ <br>
 
 ### Tham khảo:
+- https://huggingface.co/datasets/tatsu-lab/alpaca
 - https://huggingface.co/docs
+- https://github.com/tatsu-lab/stanford_alpaca
 - https://pytorch.org/tutorials/index.html
