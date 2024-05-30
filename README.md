@@ -19,4 +19,6 @@ In particular, we will train the GPT2 base model which contains just 124 million
 - https://pytorch.org/tutorials/index.html
 
 ### Screen shot:
-[!alt]['https://github.com/Mr-Jack-Tung/Instruction-Tuning-GPT2-on-Alpaca-Dataset/blob/main/Screenshot_Instruction-Tuning_GPT2_2024-05-30_01.jpg']
+![alt text](https://github.com/Mr-Jack-Tung/Instruction-Tuning-GPT2-on-Alpaca-Dataset/blob/main/Screenshot_Instruction-Tuning_GPT2_2024-05-30_01.jpg)
+
+![alt text](https://github.com/Mr-Jack-Tung/Instruction-Tuning-GPT2-on-Alpaca-Dataset/blob/main/Screenshot_Instruction-Tuning_GPT2_2024-05-30_02.jpg)
