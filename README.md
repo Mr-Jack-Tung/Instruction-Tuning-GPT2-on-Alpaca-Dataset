@@ -18,7 +18,7 @@ In particular, we will train the GPT2 base model which contains just 124 million
 - https://github.com/tatsu-lab/stanford_alpaca
 - https://pytorch.org/tutorials/index.html
 - https://debuggercafe.com/fine-tuning-phi-1-5-using-qlora
-- https://debuggercafe.com/fine-tuning-qwen-1-5-for-coding
+- https://debuggercafe.com/fine-tuning-qwen-1-5-for-coding (All the training and inference shown here were carried out on a system with 10 GB RTX 3080 GPU, 10th generation i7 GPU, and 32 GB of RAM.)
 
 ### Screen shot:
 ![alt text](https://github.com/Mr-Jack-Tung/Instruction-Tuning-GPT2-on-Alpaca-Dataset/blob/main/Screenshot_Instruction-Tuning_GPT2_2024-05-30_01.jpg)
