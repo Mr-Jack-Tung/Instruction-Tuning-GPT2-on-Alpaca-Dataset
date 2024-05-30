@@ -23,6 +23,7 @@ In particular, we will train the GPT2 base model which contains just 124 million
 - https://debuggercafe.com/getting-started-with-grammar-correction
 - https://debuggercafe.com/character-level-text-generation-using-lstm
 - https://debuggercafe.com/word-level-text-generation-using-lstm
+- https://debuggercafe.com/text-generation-with-transformers
 
 ### Screen shot:
 ![alt text](https://github.com/Mr-Jack-Tung/Instruction-Tuning-GPT2-on-Alpaca-Dataset/blob/main/Screenshot_Instruction-Tuning_GPT2_2024-05-30_01.jpg)
