@@ -21,6 +21,8 @@ In particular, we will train the GPT2 base model which contains just 124 million
 - https://debuggercafe.com/fine-tuning-qwen-1-5-for-coding (All the training and inference shown here were carried out on a system with 10 GB RTX 3080 GPU, 10th generation i7 GPU, and 32 GB of RAM.)
 - https://debuggercafe.com/spelling-correction-using-hugging-face-transformers
 - https://debuggercafe.com/getting-started-with-grammar-correction
+- https://debuggercafe.com/character-level-text-generation-using-lstm
+- https://debuggercafe.com/word-level-text-generation-using-lstm
 
 ### Screen shot:
 ![alt text](https://github.com/Mr-Jack-Tung/Instruction-Tuning-GPT2-on-Alpaca-Dataset/blob/main/Screenshot_Instruction-Tuning_GPT2_2024-05-30_01.jpg)
