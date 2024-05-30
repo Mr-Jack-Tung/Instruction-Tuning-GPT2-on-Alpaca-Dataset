@@ -1,7 +1,7 @@
 '''
 Instruction Tuning GPT2 on Alpaca Dataset
-Author: Sovit Ranjan Rath 
-Date: May 6, 2024
+Author: Sovit Ranjan Rath _ May 6, 2024
+Practice: Mr. Jack _ May30, 2024
 Link: https://debuggercafe.com/instruction-tuning-gpt2-on-alpaca-dataset/
 
 Fine-tuning language models to follow instructions is a major step in making them more useful. In this article, we will train the GPT2 model for following simple instructions. Instruction tuning GPT2 on the Alpaca dataset will reveal how well very small language models perform at following instructions.
