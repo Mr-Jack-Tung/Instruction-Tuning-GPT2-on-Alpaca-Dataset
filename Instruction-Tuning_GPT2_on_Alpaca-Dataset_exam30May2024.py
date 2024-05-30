@@ -57,6 +57,8 @@ DatasetDict({
 
 # https://huggingface.co/docs/datasets/loading
 dataset.save_to_disk('tatsu-lab-alpaca')
+# Saving the dataset (1/1 shards): 100%|████████████████████████████████████████████████████| 52002/52002 [00:00<00:00, 156045.99 examples/s]
+
 dataset = load_from_disk('tatsu-lab-alpaca')['train']
 print("\n",dataset) # ~> num_rows: 52002
 
@@ -100,6 +102,9 @@ print(f"{total_params:,} total parameters.")
 total_trainable_params = sum(
     p.numel() for p in model.parameters() if p.requires_grad)
 print(f"{total_trainable_params:,} training parameters.")
+
+# 124,439,808 total parameters.
+# 124,439,808 training parameters.
 
 
 # --------- Initializing the Tokenizer ---------
