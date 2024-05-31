@@ -11,6 +11,7 @@ In particular, we will train the GPT2 base model which contains just 124 million
 
 ~> Với example này, mặc dù mình đã copy y nguyên source code của tác giả nhưng ... vẫn bị lỗi :( chắc là do cài đặt môi trường và các cấu hình chương trình khác nhau bị lỗi thành ra phải fix lại một vài chỗ, sau hơn 1 ngày làm việc thì cũng đã xử lý xong ^^ <br>
 ~> Để thể hiện sự tôn trọng đối với tác giả, mình để nguyên phần code bản gốc,  cố gắng sửa ít nhất có thể, chỉ rào lại và thêm phần code sửa lại ở ngay dưới để vẫn đảm bảo source code chạy được và người đọc vẫn follow được phần source code nguyên bản ban đầu của tác giả ^^ <br>
+~> Trong bài này tác giả dùng 'packing=True' để tự động 'concatenate different samples of similar lengths into a single batch' . Tuy nhiên khi chạy thực tế thì kết quả trả ra không chính xác, vì vậy mình đã rào chỗ đó lại để mặc định setting 'packing=False', nhưng khi đó phải viết lại preprocess_function(example), cũng phải loay hoay một lúc thì mới test xong được chỗ này ^^ . Cuối cùng thì example này cũng đã được "thuần hóa" ^^ <br>
 
 ### Tham khảo:
 - https://huggingface.co/datasets/tatsu-lab/alpaca
