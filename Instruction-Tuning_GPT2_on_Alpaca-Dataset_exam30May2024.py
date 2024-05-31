@@ -86,14 +86,14 @@ def preprocess_function(example):
     """
     Formatting function returning a list of samples (kind of necessary for SFT API).
     """
-    text = f"### Instruction:\n{example['instruction']}\n\n### Input:\n{example['input']}\n\n### Response:\n{example['output']}"
+    # text = f"### Instruction:\n{example['instruction']}\n\n### Input:\n{example['input']}\n\n### Response:\n{example['output']}"
 
-    # SFTTrainer ~> packing=False
-    # output_texts = []
-    # for i, exam in enumerate(example['instruction']):
-	   #  text = f"### Instruction:\n{example['instruction'][i]}\n\n### Input:\n{example['input'][i]}\n\n### Response:\n{example['output'][i]}"
-	   #  output_texts.append(text)
-    return text # output_texts
+    # SFTTrainer setting ~> packing=False
+    output_texts = []
+    for i, exam in enumerate(example['instruction']):
+	    text = f"### Instruction:\n{example['instruction'][i]}\n\n### Input:\n{example['input'][i]}\n\n### Response:\n{example['output'][i]}"
+	    output_texts.append(text)
+    return output_texts # text 
 
 
 # --------- Initializing the GPT2 Base Model for Instruction Tuning ---------
@@ -157,7 +157,7 @@ trainer = SFTTrainer(
     tokenizer=tokenizer,
     args=training_args,
     formatting_func=preprocess_function,
-    packing=True # concatenate different samples of similar lengths into a single batch.
+    # packing=True # concatenate different samples of similar lengths into a single batch.
 )
 
 dataloader = trainer.get_train_dataloader()
