@@ -36,6 +36,8 @@ learning_rate = 0.0001
 model_name = 'gpt2' # 'openai-community/gpt2'
 out_dir = 'outputs/gpt2_alpaca_preprocess_fn'
 
+import datasets
+datasets.disable_caching()
 
 # Loading the Alpaca Instruction Tuning Dataset
 dataset = load_dataset('tatsu-lab/alpaca')
@@ -61,6 +63,8 @@ dataset.save_to_disk('tatsu-lab-alpaca')
 
 dataset = load_from_disk('tatsu-lab-alpaca')['train']
 print("\n",dataset) # ~> num_rows: 52002
+
+dataset.cleanup_cache_files()
 
 # https://huggingface.co/docs/datasets/process#shard
 # dataset = dataset.shard(num_shards=1000, index=0)
@@ -149,6 +153,24 @@ training_args = TrainingArguments(
     lr_scheduler_type='constant',
 )
 
+from peft import LoraConfig, get_peft_model
+peft_config = LoraConfig(
+    r=16, # 16, 32, 64, 128
+    lora_alpha=32, # 16, 32, 64, 128
+    lora_dropout=0.05,
+    bias="none",
+    task_type="CAUSAL_LM",
+    fan_in_fan_out=True,
+    target_modules=[
+        "attn.c_attn",
+        "attn.c_proj",
+        "mlp.c_fc",
+        "mlp.c_proj",
+    ],
+)
+
+model = get_peft_model(model, peft_config)
+
 trainer = SFTTrainer(
     model=model,
     train_dataset=dataset_train,
@@ -157,6 +179,7 @@ trainer = SFTTrainer(
     tokenizer=tokenizer,
     args=training_args,
     formatting_func=preprocess_function,
+    peft_config=peft_config,
     # packing=True # concatenate different samples of similar lengths into a single batch.
 )
 
