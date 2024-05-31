@@ -24,6 +24,7 @@ In particular, we will train the GPT2 base model which contains just 124 million
 - https://debuggercafe.com/character-level-text-generation-using-lstm
 - https://debuggercafe.com/word-level-text-generation-using-lstm
 - https://debuggercafe.com/text-generation-with-transformers
+- https://debuggercafe.com/introduction-to-gpt-1-and-gpt-2
 - https://skylion007.github.io/OpenWebTextCorpus
 
 ### Screen shot:
