@@ -194,6 +194,8 @@ print("dataloader:",len(dataloader))
 
 history = trainer.train()
 
+model.merge_adapter()
+
 model.save_pretrained(f"{out_dir}/best_model")
 tokenizer.save_pretrained(f"{out_dir}/best_model")
 
