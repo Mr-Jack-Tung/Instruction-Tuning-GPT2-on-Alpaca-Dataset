@@ -63,8 +63,11 @@ dataset = load_from_disk('tatsu-lab-alpaca')['train']
 print("\n",dataset) # ~> num_rows: 52002
 
 # https://huggingface.co/docs/datasets/process#shard
-dataset = dataset.shard(num_shards=1000, index=0)
-print("\n",dataset) # ~> num_rows: 53
+# dataset = dataset.shard(num_shards=1000, index=0)
+# print("\n",dataset) # ~> num_rows: 53
+
+dataset = dataset.select(range(50))
+print("\n",dataset) # ~> num_rows: 50
 
 # full_dataset = dataset['train'].train_test_split(test_size=0.05, shuffle=True)
 full_dataset = dataset.train_test_split(test_size=0.2, shuffle=True)
@@ -74,8 +77,8 @@ dataset_valid = full_dataset['test']
 print(dataset_train)
 print(dataset_valid)
 
-# ~> dataset_train 42
-# ~> dataset_valid 11
+# ~> dataset_train 40
+# ~> dataset_valid 10
 
 
 # --------- The Preprocessing Function ---------
