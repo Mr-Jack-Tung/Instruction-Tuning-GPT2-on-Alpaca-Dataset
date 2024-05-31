@@ -24,7 +24,7 @@ In particular, we will train the GPT2 base model which contains just 124 million
 - https://debuggercafe.com/character-level-text-generation-using-lstm
 - https://debuggercafe.com/word-level-text-generation-using-lstm
 - https://debuggercafe.com/text-generation-with-transformers
-- https://debuggercafe.com/introduction-to-gpt-1-and-gpt-2
+- https://debuggercafe.com/introduction-to-gpt-1-and-gpt-2 (Question Answering: ... The smallest GPT-2 model answers less than 1% of the questions correctly even for the most common questions. On the same questions, the largest GPT-2 model answers the question correctly 5.3 times more. This shows that larger models tend to perform better on several zero-shot tasks compared to smaller models with the same architecture.)
 - https://skylion007.github.io/OpenWebTextCorpus
 
 ### Screen shot:
