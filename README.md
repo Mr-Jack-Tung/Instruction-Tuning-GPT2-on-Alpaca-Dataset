@@ -37,6 +37,7 @@ In particular, we will train the GPT2 base model which contains just 124 million
 
 ### Update 31 May 2024: Sử dụng LoRA trong Instruction Tuning GPT2 ^^
 ```
+...
 from peft import LoraConfig, get_peft_model
 peft_config = LoraConfig(
     r=16, # 16, 32, 64, 128
@@ -62,4 +63,5 @@ trainer = SFTTrainer(
 )
 ...
 model.merge_adapter()
+...
 ```
