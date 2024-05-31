@@ -34,3 +34,24 @@ In particular, we will train the GPT2 base model which contains just 124 million
 ![alt text](https://github.com/Mr-Jack-Tung/Instruction-Tuning-GPT2-on-Alpaca-Dataset/blob/main/Screenshot_Instruction-Tuning_GPT2_2024-05-30_01.jpg)
 
 ![alt text](https://github.com/Mr-Jack-Tung/Instruction-Tuning-GPT2-on-Alpaca-Dataset/blob/main/Screenshot_Instruction-Tuning_GPT2_2024-05-30_02.jpg)
+
+### Update 31 May 2024: Sử dụng LoRA trong Instruction Tuning GPT2 ^^
+'''
+from peft import LoraConfig, get_peft_model
+peft_config = LoraConfig(
+    r=16, # 16, 32, 64, 128
+    lora_alpha=32, # 16, 32, 64, 128
+    lora_dropout=0.05,
+    bias="none",
+    task_type="CAUSAL_LM",
+    fan_in_fan_out=True,
+    target_modules=[
+        "attn.c_attn",
+        "attn.c_proj",
+        "mlp.c_fc",
+        "mlp.c_proj",
+    ],
+)
+
+model = get_peft_model(model, peft_config)
+'''
