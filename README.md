@@ -54,4 +54,12 @@ peft_config = LoraConfig(
 )
 
 model = get_peft_model(model, peft_config)
+
+...
+trainer = SFTTrainer(
+    ...
+    peft_config=peft_config,
+)
+...
+model.merge_adapter()
 ```
